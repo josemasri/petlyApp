@@ -1,0 +1,36 @@
+<ion-list>
+  <ion-item>
+    <ion-label>Perros</ion-label>
+    <ion-checkbox checked="true" color="primary">Perros</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Gatos</ion-label>
+    <ion-checkbox checked="true" color="secondary">Gatos</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Peces</ion-label>
+    <ion-checkbox checked="true" color="tertiary">Peces</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Roedores</ion-label>
+    <ion-checkbox checked="true" color="success">Roedores</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Reptiles</ion-label>
+    <ion-checkbox checked="true" color="warning">Reptiles</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Aves</ion-label>
+    <ion-checkbox checked="true" color="danger">Aves</ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Distancia</ion-label>
+    <ion-select>
+      <ion-select-option value="10" selected>10 km</ion-select-option>
+      <ion-select-option value="20">20 km</ion-select-option>
+      <ion-select-option value="30">30 km</ion-select-option>
+      <ion-select-option value="40">40+ km</ion-select-option>
+    </ion-select>
+  </ion-item>
+    <ion-button expand="full" (click)="DismissClick()"><ion-icon name="checkmark-circle-outline"></ion-icon>Aplicar</ion-button>
+</ion-list>

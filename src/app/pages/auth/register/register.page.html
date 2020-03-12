@@ -1,0 +1,44 @@
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center class="ion-margin-top">
+            <h3 class="ion-text-center">¡Crea tu cuenta en Petly!</h3>
+          </div>
+          <div padding id="register">
+            <ion-item class="formItem">
+              <ion-input minlength="3" name="nombre" type="text" placeholder="Nombre" ngModel required></ion-input>
+            </ion-item>
+            <ion-item class="formItem">
+              <ion-input  minlength="3" name="apellidoP" type="text" placeholder="Apellido Paterno" ngModel required></ion-input>
+            </ion-item>
+            <ion-item class="formItem">
+              <ion-input  minlength="3" name="apellidoM" type="text" placeholder="Apellido Materno" ngModel required></ion-input>
+            </ion-item>
+            <ion-item class="formItem">
+              <ion-input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" type="email" placeholder="tu@email.com" ngModel required></ion-input>
+            </ion-item>
+            <ion-item class="formItem">
+              <ion-input minlength="8" name="password" type="password" placeholder="Contraseña (minimo 8 carácteres)" ngModel required></ion-input>
+            </ion-item>
+            <ion-item class="formItem">
+              <ion-input minlength="8" name="confirmPassword" type="password" placeholder="Repite Contraseña" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Registrarme</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+
+
+<ion-footer>
+  <ion-item>
+    <ion-label class="ion-text-center">¿Ya tienes cuenta?</ion-label>
+    <ion-button expand="full" fill="solid" routerLink="/login">Iniciar secion</ion-button>
+  </ion-item>
+</ion-footer>
